@@ -4,7 +4,7 @@ const HeroSection = () => {
       <div className="w-1/2 z-[2] h-full absolute opacity-40 -right-48 top-0 pattern"></div>
       <img className="absolute w-20 -top-4 -left-0 " src="/leave.png" alt="" />
       <img
-        className="absolute bottom-0 w-32 rotate-180 -right-0 "
+        className="absolute z-[4] bottom-0 w-32 rotate-180 -right-0 "
         src="/leave.png"
         alt=""
       />

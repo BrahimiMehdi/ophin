@@ -2,7 +2,7 @@ import Link from "next/link";
 import { HiMenu } from "react-icons/hi";
 const Header = () => {
   return (
-    <header className="fixed px-20  z-[5] top-0 left-0 h-20 w-full pt-6">
+    <header className="fixed bg-stone-100 shadow-lg px-20  z-[5] top-0 left-0 h-20 w-full pt-6">
       <div className="flex justify-between w-full gap-x-8">
         <Link
           className="text-2xl font-extrabold font-Montserrat text-dark-brown"

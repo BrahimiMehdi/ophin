@@ -19,7 +19,7 @@ module.exports = {
       colors:{
         "main-brown" :"#F7ECD6",
         "main-green" :"#CADDC1",
-        "second-green" :"#80C63E",
+        "second-green" :"#a6c688",
         "dark-brown" :"#572C1B",
       }
     },

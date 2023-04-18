@@ -38,9 +38,9 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #80C63E;
+  background: #a6c688;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #72ae3b;
+  background: #a6c688;
 }
