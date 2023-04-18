@@ -1,3 +1,4 @@
+import Button from "./utils/Button";
 const HeroSection = () => {
   return (
     <section className="relative grid w-full h-screen grid-cols-1 gap-4 px-4 py-20 overflow-hidden lg:px-20 lg:grid-cols-2 ">
@@ -18,9 +19,7 @@ const HeroSection = () => {
           Join us to learn, connect, and share ideas in a supportive
           environment.
         </p>
-        <button className="capitalize text-lg shadow-xl outline-main-brown text-[rgb(255,255,255)] rounded-xl w-64 py-4 outline bg-second-green">
-          get to know us
-        </button>
+        <Button text="Get to know us" type="button" style={{bordered:false,primary:true}} />
       </div>
       <div className="relative grid w-full h-full place-items-center ">
         <svg
