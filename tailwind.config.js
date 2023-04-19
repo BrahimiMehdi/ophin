@@ -19,8 +19,9 @@ module.exports = {
       colors:{
         "main-brown" :"#F7ECD6",
         "main-green" :"#CADDC1",
+        "dark-green" :"#197337",
         "second-green" :"#a6c688",
-        "dark-brown" :"#572C1B",
+        "dark-brown" :"#A5725E",
       }
     },
   },
