@@ -2,7 +2,7 @@ import Head from "next/head"
 import { HeroSection,Header, About } from "@/components"
 export default function Home() {
   return (
-    <div className="items-center w-full bg-main-brown">
+    <div className=" bg-main-brown">
       <Head>
         <title>Ophin</title>
       </Head>

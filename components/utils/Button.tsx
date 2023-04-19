@@ -11,12 +11,12 @@ interface ButtonInputType {
 import Link from "next/link";
 const Button = ({type,text,style,href}:ButtonInputType) => {
   if(type!=="link") return (
-    <button className={`${style.bordered && "outline outline-dark-brown"} ${style.primary ? "bg-second-green text-white" :"bg-transparent text-dark-brown"} capitalize text-lg shadow-xl   rounded-xl w-64 py-4 `} type={type}>
+    <button className={`${style.bordered && "outline outline-dark-brown"} ${style.primary ? "bg-second-green text-white w-64 shadow-xl" :"bg-transparent w-fit text-dark-brown"} capitalize text-lg    rounded-xl  py-4 `} type={type}>
         {text}
     </button>
   )
   if(href) return (
-    <Link href={href} className={`${style.bordered && "outline outline-dark-brown"} ${style.primary ? "bg-second-green text-white" :"bg-transparent text-dark-brown"} capitalize text-lg shadow-xl   rounded-xl w-64 py-4 `} type={type}>
+    <Link href={href} className={`${style.bordered && "outline outline-dark-brown"} ${style.primary ? "bg-second-green text-white w-64 shadow-xl" :"bg-transparent w-fit text-dark-brown"} capitalize text-lg    rounded-xl  py-4 `} type={type}>
         {text}
     </Link>
   )

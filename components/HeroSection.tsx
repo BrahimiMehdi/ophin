@@ -1,20 +1,33 @@
 import Button from "./utils/Button";
 const HeroSection = () => {
   return (
-    <section className="relative grid w-full h-screen grid-cols-1 gap-4 px-4 py-20 overflow-hidden lg:px-20 lg:grid-cols-2 ">
-      <div className="w-1/2 z-[2] h-full absolute opacity-40 -right-48 top-0 pattern"></div>
-      <img className="absolute w-20 -top-4 -left-0 " src="/leave.png" alt="" />
+    <section id="hero" className="relative grid w-full h-screen grid-cols-1 gap-4 px-4 py-20 overflow-hidden lg:px-20 lg:grid-cols-2 ">
+      <svg className="absolute top-0 w-full" viewBox="0 0 1440 207" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <g clipPath="url(#clip0_378_2)">
+      <path d="M0 82.7998L80 96.6139C160 110.259 320 138.141 480 138.014C640 138.141 800 110.259 960 110.386C1120 110.259 1280 138.141 1440 134.55C1600 130.959 1760 96.7406 1920 72.4498C2080 48.159 2240 34.6406 2400 48.2857C2560 62.0998 2720 103.5 2880 106.964C3040 110.259 3200 76.0406 3360 79.3357C3520 82.7998 3680 124.2 3840 148.364C4000 172.359 4160 179.541 4320 172.486C4480 165.6 4640 144.9 4800 138.014C4960 130.959 5120 138.141 5280 144.9C5440 151.659 5600 158.841 5760 155.25C5920 151.659 6080 138.141 6240 127.664C6400 117.441 6560 110.259 6720 117.314C6880 124.2 7040 144.9 7200 144.9C7360 144.9 7520 124.2 7680 131.086C7840 138.141 8000 172.359 8160 162.136C8320 151.659 8480 96.7406 8640 79.3357C8800 62.0998 8960 82.7998 9120 93.1498C9280 103.5 9440 103.5 9600 89.6857C9760 76.0406 9920 48.159 10080 48.2857C10240 48.159 10400 76.0406 10560 96.6139C10720 117.441 10880 130.959 11040 134.55C11200 138.141 11360 130.959 11440 127.664L11520 124.2V-0.000203809H11440C11360 -0.000203809 11200 -0.000203809 11040 -0.000203809C10880 -0.000203809 10720 -0.000203809 10560 -0.000203809C10400 -0.000203809 10240 -0.000203809 10080 -0.000203809C9920 -0.000203809 9760 -0.000203809 9600 -0.000203809C9440 -0.000203809 9280 -0.000203809 9120 -0.000203809C8960 -0.000203809 8800 -0.000203809 8640 -0.000203809C8480 -0.000203809 8320 -0.000203809 8160 -0.000203809C8000 -0.000203809 7840 -0.000203809 7680 -0.000203809C7520 -0.000203809 7360 -0.000203809 7200 -0.000203809C7040 -0.000203809 6880 -0.000203809 6720 -0.000203809C6560 -0.000203809 6400 -0.000203809 6240 -0.000203809C6080 -0.000203809 5920 -0.000203809 5760 -0.000203809C5600 -0.000203809 5440 -0.000203809 5280 -0.000203809C5120 -0.000203809 4960 -0.000203809 4800 -0.000203809C4640 -0.000203809 4480 -0.000203809 4320 -0.000203809C4160 -0.000203809 4000 -0.000203809 3840 -0.000203809C3680 -0.000203809 3520 -0.000203809 3360 -0.000203809C3200 -0.000203809 3040 -0.000203809 2880 -0.000203809C2720 -0.000203809 2560 -0.000203809 2400 -0.000203809C2240 -0.000203809 2080 -0.000203809 1920 -0.000203809C1760 -0.000203809 1600 -0.000203809 1440 -0.000203809C1280 -0.000203809 1120 -0.000203809 960 -0.000203809C800 -0.000203809 640 -0.000203809 480 -0.000203809C320 -0.000203809 160 -0.000203809 80 -0.000203809H0V82.7998Z" fill="white"/>
+      </g>
+      <defs>
+      <clipPath id="clip0_378_2">
+      <rect className="h-full w-full" fill="white" transform="matrix(1 0 0 -1 0 207)"/>
+      </clipPath>
+      </defs>
+      </svg>
+
+      <svg className="absolute bottom-0 z-[3]"  viewBox="0 0 1440 320"><path className="fill-second-green" fill-opacity="1" d="M0,160L80,138.7C160,117,320,75,480,69.3C640,64,800,96,960,101.3C1120,107,1280,85,1360,74.7L1440,64L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path></svg>
+        <svg className="absolute -left-8 bottom-4 opacity-50 z-[2]"  viewBox="0 0 1440 320"><path className="fill-main-green" fill-opacity="1" d="M0,160L80,138.7C160,117,320,75,480,69.3C640,64,800,96,960,101.3C1120,107,1280,85,1360,74.7L1440,64L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path></svg>
+        <svg className="absolute -left-16 bottom-8 z-[1] opacity-20"  viewBox="0 0 1440 320"><path className="fill-white" fill-opacity="1" d="M0,160L80,138.7C160,117,320,75,480,69.3C640,64,800,96,960,101.3C1120,107,1280,85,1360,74.7L1440,64L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path></svg>
+      <img className="absolute w-16 -top-4 -left-2 " src="/leave.png" alt="" />
       <img
         className="absolute z-[4] bottom-0 w-32 rotate-180 -right-0 "
         src="/leave.png"
         alt=""
       />
 
-      <div className="flex flex-col justify-center w-full h-full py-8 font-Amaranth text-dark-brown gap-y-8">
+      <div className="flex flex-col relative z-[4] justify-center w-full h-full py-8 font-Amaranth text-dark-brown gap-y-8">
         <h1 className="text-6xl font-bold lg:text-8xl font-Montserrat">
           Ophin Club
         </h1>
-        <p className="relative text-xl text-stone-600 left-2 lg:text-2xl">
+        <p className="relative text-xl font-light text-stone-600 left-2 lg:text-2xl">
           Our space is a diverse and inclusive community that welcomes everyone.
           Join us to learn, connect, and share ideas in a supportive
           environment.
