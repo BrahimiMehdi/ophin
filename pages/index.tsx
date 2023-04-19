@@ -1,5 +1,5 @@
 import Head from "next/head"
-import { HeroSection,Header, About } from "@/components"
+import { HeroSection,Header,PlantsSection, About } from "@/components"
 export default function Home() {
   return (
     <div className=" bg-main-brown">
@@ -10,6 +10,7 @@ export default function Home() {
         <Header />
         <HeroSection />
         <About />
+        <PlantsSection />
       </main>
     </div>
   )

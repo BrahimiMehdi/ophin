@@ -1,5 +1,16 @@
 import Button from "./utils/Button";
+import { gsap ,Power3} from "gsap";
+import {useEffect,useRef} from "react"
 const HeroSection = () => {
+  const TextArea = useRef<HTMLDivElement>(null);
+  const Illustration = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    const tl = gsap.timeline();
+    tl.to(TextArea.current,{x:0,opacity:1,ease:Power3.easeInOut,duration:2})
+        .to(Illustration.current,{x:0,opacity:1,ease:Power3.easeInOut,duration:2},"-=1.6")
+
+  }, [])
+  
   return (
     <section id="hero" className="relative bg-white bg-opacity-70 grid w-full h-screen grid-cols-1 gap-4 px-4 py-20 overflow-hidden lg:px-20 lg:grid-cols-2 ">
       <svg className="absolute top-0 w-full" viewBox="0 0 1440 207" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -23,7 +34,7 @@ const HeroSection = () => {
         alt=""
       />
 
-      <div className="flex flex-col relative z-[4] justify-center w-full h-full py-8 font-Amaranth text-dark-brown gap-y-8">
+      <div ref={TextArea} className="flex opacity-0 -translate-x-full flex-col relative z-[4] justify-center w-full h-full py-8 font-Amaranth text-dark-brown gap-y-8">
         <h1 className="text-6xl  text-dark-green font-bold lg:text-8xl font-Montserrat">
           OPHIN Club
         </h1>
@@ -34,7 +45,7 @@ const HeroSection = () => {
         </p>
         <Button scrollTo="about" text="Get to know us" type="button" style={{bordered:false,primary:true}} />
       </div>
-      <div className="relative grid w-full h-full place-items-center ">
+      <div ref={Illustration} className="relative translate-x-full opacity-0 grid w-full h-full place-items-center ">
         <svg
           viewBox="0 0 5091 2392"
           className="w-full relative z-[3] [transform:rotateY(180deg);]"
