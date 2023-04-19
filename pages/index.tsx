@@ -1,6 +1,9 @@
 import Head from "next/head"
 import { HeroSection,Header,PlantsSection, About } from "@/components"
-export default function Home() {
+import { getAllPlants } from "@/services"
+import { SinglePlantResponse } from "@/services"
+import { GetStaticProps ,InferGetStaticPropsType} from "next"
+export default function Home({plants}:{plants:SinglePlantResponse[]}) {
   return (
     <div className=" bg-main-brown">
       <Head>
@@ -10,8 +13,16 @@ export default function Home() {
         <Header />
         <HeroSection />
         <About />
-        <PlantsSection />
+        <PlantsSection plants={plants} />
       </main>
     </div>
   )
+}
+export const  getStaticProps:GetStaticProps = async() => {
+  const plants = await getAllPlants()
+  return {
+    props: {
+      plants:plants
+    }, // will be passed to the page component as props
+  }
 }
