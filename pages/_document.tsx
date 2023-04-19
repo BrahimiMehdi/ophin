@@ -4,6 +4,11 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head>
+        <link rel="shortcut icon" href="Logo.png" type="image/x-icon" />
+        <meta http-equiv="X-UA-Compatible" content="IE=7" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <meta name="description" content="Our space is a diverse and inclusive community that welcomes everyone. Join us to learn, connect, and share ideas in a supportive environment." />
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com"  />
         <link
