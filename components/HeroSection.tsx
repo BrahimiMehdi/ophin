@@ -12,9 +12,9 @@ const HeroSection = () => {
       </clipPath>
       </defs>
       </svg>
-
-      <svg className="absolute bottom-0 z-[3]"  viewBox="0 0 1440 320"><path className="fill-second-green" fill-opacity="1" d="M0,160L80,138.7C160,117,320,75,480,69.3C640,64,800,96,960,101.3C1120,107,1280,85,1360,74.7L1440,64L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path></svg>
-        <svg className="absolute -left-8 bottom-4 opacity-50 z-[2]"  viewBox="0 0 1440 320"><path className="fill-main-green" fill-opacity="1" d="M0,160L80,138.7C160,117,320,75,480,69.3C640,64,800,96,960,101.3C1120,107,1280,85,1360,74.7L1440,64L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path></svg>
+      
+      <svg className="absolute bottom-0 z-[3]"  viewBox="0 0 1440 320"><path className="fill-main-green" fill-opacity="1" d="M0,160L80,138.7C160,117,320,75,480,69.3C640,64,800,96,960,101.3C1120,107,1280,85,1360,74.7L1440,64L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path></svg>
+        <svg className="absolute -left-8 bottom-4 opacity-50 z-[2]"  viewBox="0 0 1440 320"><path className="fill-second-green" fill-opacity="1" d="M0,160L80,138.7C160,117,320,75,480,69.3C640,64,800,96,960,101.3C1120,107,1280,85,1360,74.7L1440,64L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path></svg>
         <svg className="absolute -left-16 bottom-8 z-[1] opacity-20"  viewBox="0 0 1440 320"><path className="fill-white" fill-opacity="1" d="M0,160L80,138.7C160,117,320,75,480,69.3C640,64,800,96,960,101.3C1120,107,1280,85,1360,74.7L1440,64L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path></svg>
       <img className="absolute w-16 -top-4 -left-2 " src="/leave.png" alt="" />
       <img
@@ -32,7 +32,7 @@ const HeroSection = () => {
           Join us to learn, connect, and share ideas in a supportive
           environment.
         </p>
-        <Button text="Get to know us" type="button" style={{bordered:false,primary:true}} />
+        <Button scrollTo="about" text="Get to know us" type="button" style={{bordered:false,primary:true}} />
       </div>
       <div className="relative grid w-full h-full place-items-center ">
         <svg
