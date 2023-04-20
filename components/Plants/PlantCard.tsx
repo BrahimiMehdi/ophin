@@ -1,7 +1,4 @@
-import Link from "next/link";
-import { AiOutlineRight } from "react-icons/ai";
 import Image from "next/image";
-import { Url } from "url";
 import { SinglePlantResponse } from "@/services";
 const PlantCard = ({plants}:{plants:SinglePlantResponse}) => {
   return (

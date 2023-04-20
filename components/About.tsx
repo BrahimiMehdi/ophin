@@ -3,7 +3,7 @@ const About = () => {
   return (
     <section
       id="about"
-      className="grid lg:grid-cols-2  gap-8 py-4  place-items-center   z-[3] relative bg-dark-brown w-full text-center"
+      className="grid lg:grid-cols-2  overflow-x-hidden  gap-8 py-4  place-items-center   z-[3] relative bg-dark-brown w-full text-center"
     >
       {/* lines svg */}
       <svg className="absolute left-0 rotate-180 opacity-5 top-0 w-full" preserveAspectRatio="none" viewBox="0 0 1440 560">

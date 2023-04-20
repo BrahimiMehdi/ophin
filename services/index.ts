@@ -32,7 +32,22 @@ const getPlantsQuery = gql`
     }
   }
 `;
-export const getAllPlants = async () => {
-  const res: TotalPlantReponse = await request(API, getPlantsQuery);
+const getHomePlantsQuery = gql`
+  query Plants {
+    plants(first:6) {
+      fullDescription
+      name
+      shortDescription
+      slug
+      image {
+        url
+        width
+        height
+      }
+    }
+  }
+`;
+export const getPlants = async ({type}:{type:"all" |"partial"}) => {
+  const res: TotalPlantReponse = await request(API, type==="partial" ? getHomePlantsQuery : getPlantsQuery);
   return res.plants;
 };

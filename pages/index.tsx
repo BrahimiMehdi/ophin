@@ -1,9 +1,9 @@
 import Head from "next/head"
-import { HeroSection,Header,NavBar,PlantsSection, About } from "@/components"
-import { getAllPlants } from "@/services"
+import { HeroSection,Header,Footer,NavBar,PlantsSection, About } from "@/components"
+import { getPlants } from "@/services"
 import { SinglePlantResponse } from "@/services"
 import { GetStaticProps} from "next"
-import { useState,useEffect } from "react";
+import { useState } from "react";
 
 export default function Home({plants}:{plants:SinglePlantResponse[]}) {
   const [openNav, setopenNav] = useState<boolean>(false)
@@ -36,12 +36,13 @@ export default function Home({plants}:{plants:SinglePlantResponse[]}) {
         <HeroSection />
         <About />
         <PlantsSection plants={plants} />
+        <Footer />
       </main>
     </div>
   )
 }
 export const  getStaticProps:GetStaticProps = async() => {
-  const plants = await getAllPlants()
+  const plants = await getPlants({type:"partial"})
   return {
     props: {
       plants:plants
