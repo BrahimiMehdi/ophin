@@ -1,10 +1,9 @@
 import Link from "next/link";
+import Contact from "./Contact";
 import {AiFillInstagram,AiFillFacebook,AiFillMail,AiFillPhone,AiOutlineCopyright} from "react-icons/ai"
 const Footer = () => {
-
-    
   return (
-    <footer className="flex py-8 relative mt-16 h-fit bg-white flex-col gap-y-4 w-full items-center">
+    <footer id="contact" className="flex py-8 relative mt-16 h-fit bg-white flex-col gap-y-4 w-full items-center">
         <svg className="absolute lg:-top-32 -top-10 sm:-top-16  xl:-top-36 rotate-180 w-full" viewBox="0 0 1440 207" fill="none" xmlns="http://www.w3.org/2000/svg">
       <g clipPath="url(#clip0_378_2)">
       <path d="M0 82.7998L80 96.6139C160 110.259 320 138.141 480 138.014C640 138.141 800 110.259 960 110.386C1120 110.259 1280 138.141 1440 134.55C1600 130.959 1760 96.7406 1920 72.4498C2080 48.159 2240 34.6406 2400 48.2857C2560 62.0998 2720 103.5 2880 106.964C3040 110.259 3200 76.0406 3360 79.3357C3520 82.7998 3680 124.2 3840 148.364C4000 172.359 4160 179.541 4320 172.486C4480 165.6 4640 144.9 4800 138.014C4960 130.959 5120 138.141 5280 144.9C5440 151.659 5600 158.841 5760 155.25C5920 151.659 6080 138.141 6240 127.664C6400 117.441 6560 110.259 6720 117.314C6880 124.2 7040 144.9 7200 144.9C7360 144.9 7520 124.2 7680 131.086C7840 138.141 8000 172.359 8160 162.136C8320 151.659 8480 96.7406 8640 79.3357C8800 62.0998 8960 82.7998 9120 93.1498C9280 103.5 9440 103.5 9600 89.6857C9760 76.0406 9920 48.159 10080 48.2857C10240 48.159 10400 76.0406 10560 96.6139C10720 117.441 10880 130.959 11040 134.55C11200 138.141 11360 130.959 11440 127.664L11520 124.2V-0.000203809H11440C11360 -0.000203809 11200 -0.000203809 11040 -0.000203809C10880 -0.000203809 10720 -0.000203809 10560 -0.000203809C10400 -0.000203809 10240 -0.000203809 10080 -0.000203809C9920 -0.000203809 9760 -0.000203809 9600 -0.000203809C9440 -0.000203809 9280 -0.000203809 9120 -0.000203809C8960 -0.000203809 8800 -0.000203809 8640 -0.000203809C8480 -0.000203809 8320 -0.000203809 8160 -0.000203809C8000 -0.000203809 7840 -0.000203809 7680 -0.000203809C7520 -0.000203809 7360 -0.000203809 7200 -0.000203809C7040 -0.000203809 6880 -0.000203809 6720 -0.000203809C6560 -0.000203809 6400 -0.000203809 6240 -0.000203809C6080 -0.000203809 5920 -0.000203809 5760 -0.000203809C5600 -0.000203809 5440 -0.000203809 5280 -0.000203809C5120 -0.000203809 4960 -0.000203809 4800 -0.000203809C4640 -0.000203809 4480 -0.000203809 4320 -0.000203809C4160 -0.000203809 4000 -0.000203809 3840 -0.000203809C3680 -0.000203809 3520 -0.000203809 3360 -0.000203809C3200 -0.000203809 3040 -0.000203809 2880 -0.000203809C2720 -0.000203809 2560 -0.000203809 2400 -0.000203809C2240 -0.000203809 2080 -0.000203809 1920 -0.000203809C1760 -0.000203809 1600 -0.000203809 1440 -0.000203809C1280 -0.000203809 1120 -0.000203809 960 -0.000203809C800 -0.000203809 640 -0.000203809 480 -0.000203809C320 -0.000203809 160 -0.000203809 80 -0.000203809H0V82.7998Z" fill="white"/>
@@ -15,8 +14,8 @@ const Footer = () => {
       </clipPath>
       </defs>
       </svg>
-        <div className="w-64 flex relative z-[3] justify-between items-center">
-        <ul className="justify-between items-center h-full  w-full text-xl flex text-dark-brown font-Amaranth ">
+        <div className="w-full max-w-6xl grid grid-rows-2 px-8 lg:flex relative z-[3] gap-y-8 justify-center lg:justify-between items-center">
+        <ul className="items-center lg:justify-normal justify-evenly lg:px-0 px-8 gap-x-48 lg:h-full  w-full text-xl flex text-dark-brown font-Amaranth ">
           <li>
             <Link href={"/"} className="relative cursor-pointer group">
               Home
@@ -30,8 +29,8 @@ const Footer = () => {
             </Link>
           </li>
         </ul>
-      </div>
-      <div className="h-28 px-4 py-4 flex justify-between max-w-xl mt-8 gap-x-8 w-full">
+        {/* social media */}
+        <div className="lg:h-28 lg:p-4 flex justify-between max-w-xl items-center lg:mt-8 gap-x-8 w-full">
         <a href="http://instagram.com" target="_blank" rel="noopener noreferrer">
         <AiFillInstagram className="lg:text-5xl text-3xl transition-transform duration-500 ease-in-out hover:-translate-y-2 text-white p-2 lg:p-4 rounded-full lg:h-16 lg:w-16 h-12 w-12 bg-dark-brown" />
         </a>
@@ -45,9 +44,10 @@ const Footer = () => {
         <AiFillMail className="lg:text-5xl text-3xl transition-transform duration-500 ease-in-out hover:-translate-y-2 text-white p-2 lg:p-4 rounded-full lg:h-16 lg:w-16 h-12 w-12 bg-dark-brown" />
         </a>
       </div>
-      <div className="flex items-center gap-x-4 text-dark-green mt-4 "><AiOutlineCopyright className="text-xl" /><span> 2023.OPHIN All rights reserved</span></div>
-
-        <svg className=" bottom-0 relative z-[3] max-w-xl left-0" viewBox="0 0 2005 1730" fill="none" xmlns="http://www.w3.org/2000/svg">
+      </div>
+      <div className="w-full lg:justify-center  grid lg:grid-cols-2">
+      <Contact />
+      <svg className=" bottom-0 relative z-[3] max-w-xl left-0" viewBox="0 0 2005 1730" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M1358.29 339.822H67.7832V1615.21H1358.29V339.822Z" fill="white" stroke="#263238" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M665.256 474.123H584.217V566.418H665.256V474.123Z" fill="white" stroke="#263238" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M636.799 474.123H584.217V566.418H636.799V474.123Z" fill="white" stroke="#263238" stroke-linecap="round" stroke-linejoin="round"/>
@@ -361,7 +361,10 @@ const Footer = () => {
 <path d="M1718.47 1582.85H1552.14V1604.55H1718.47V1582.85Z" fill="#595959" stroke="#263238" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M2003.81 1595.5H13.9277V1633.48H2003.81V1595.5Z" fill="#263238" stroke="#263238" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
-
+      
+      </div>
+      
+      <div className="flex items-center gap-x-4 text-dark-green mt-4 "><AiOutlineCopyright className="text-xl" /><span> 2023.OPHIN All rights reserved</span></div>
       
     </footer>
   );
