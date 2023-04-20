@@ -31,7 +31,7 @@ const Footer = () => {
         </ul>
         {/* social media */}
         <div className="lg:h-28 lg:p-4 flex justify-between max-w-xl items-center  gap-x-8 w-full">
-        <a href="http://instagram.com" target="_blank" rel="noopener noreferrer">
+        <a href="https://www.instagram.com/ophin.club/" target="_blank" rel="noopener noreferrer">
         <AiFillInstagram className="lg:text-5xl text-3xl transition-transform duration-500 ease-in-out hover:-translate-y-2 text-white p-2 lg:p-4 rounded-full lg:h-16 lg:w-16 h-12 w-12 bg-dark-brown" />
         </a>
         <a href="https://www.facebook.com/profile.php?id=100090693424521" target="_blank" rel="noopener noreferrer">
