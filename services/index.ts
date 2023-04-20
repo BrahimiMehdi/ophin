@@ -32,6 +32,21 @@ const getPlantsQuery = gql`
     }
   }
 `;
+const getPlantDetailsQuery = gql`
+  query Plants($slug:String!) {
+    plants(where:{slug:$slug}) {
+      fullDescription
+      name
+      shortDescription
+      slug
+      image {
+        url
+        width
+        height
+      }
+    }
+  }
+`;
 const getHomePlantsQuery = gql`
   query Plants {
     plants(first:6) {
@@ -47,7 +62,7 @@ const getHomePlantsQuery = gql`
     }
   }
 `;
-export const getPlants = async ({type}:{type:"all" |"partial"}) => {
-  const res: TotalPlantReponse = await request(API, type==="partial" ? getHomePlantsQuery : getPlantsQuery);
+export const getPlants = async ({type,slug}:{type:"all" |"partial" | "single",slug?:string | string[]}) => {
+  const res: TotalPlantReponse = await request(API, type==="partial" ? getHomePlantsQuery : type==="single" ? getPlantDetailsQuery : getPlantsQuery,{slug});
   return res.plants;
 };

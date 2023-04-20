@@ -1,29 +1,53 @@
 import Head from "next/head"
-import { HeroSection,Header,Footer,NavBar,PlantsSection, About } from "@/components"
+import { Footer} from "@/components"
+import Image from "next/image"
 import { getPlants } from "@/services"
 import { SinglePlantResponse } from "@/services"
-import { GetStaticProps} from "next"
-import { useState } from "react";
+import { GetStaticPaths, GetStaticProps, GetStaticPropsContext} from "next"
+import { AiFillLeftCircle } from "react-icons/ai"
+import Link from "next/link"
 
-export default function Home({plants}:{plants:SinglePlantResponse[]}) {
-  const [openNav, setopenNav] = useState<boolean>(false)
+export default function Home({plant}:{plant:SinglePlantResponse}) {
 
   return (
     <div className=" bg-main-brown">
       <Head>
         <title>Ophin</title>
       </Head>
-      <main className="flex flex-col items-center min-h-screen">
-        <PlantsSection plants={plants} />
+      
+      <main className="flex items-center flex-col min-h-screen">
+      <div className="absolute top-4 left-4 w-16 grid place-items-center">
+      <Link className="w-fit " href={"/plants"}>
+      <AiFillLeftCircle className="text-5xl w-fit text-second-green " />
+      </Link>
+      </div>
+        <article className="w-full px-8 prose gap-12 py-20 mt-8 max-w-7xl grid lg:grid-cols-2">
+            <Image className="h-full w-full object-cover rounded-md" alt={plant.name} width={plant.image.width} height={plant.image.height} src={plant.image.url} />
+            <div className="flex w-full h-full flex-col">
+            <h1 className="text-5xl relative z-[2]  font-bold font-Montserrat  text-dark-brown">{plant.name}</h1>
+            {plant.fullDescription}
+            </div>
+        </article>
       </main>
     </div>
   )
 }
-export const  getStaticProps:GetStaticProps = async() => {
-  const plants = await getPlants({type:"all"})
+
+export const getStaticPaths:GetStaticPaths = async ()=>{
+    const plants = await getPlants({type:"all"})
+    const paths = plants.map((plante)=> ({
+        params:{slug:plante.slug}
+    }))
+    return{
+        paths,fallback:false
+    }
+}
+export const  getStaticProps:GetStaticProps = async(context:GetStaticPropsContext) => {
+    const slug = context?.params?.slug;
+    const plant = await getPlants({type:"single",slug:slug})
   return {
     props: {
-      plants:plants
+      plant:plant[0]
     }, // will be passed to the page component as props
   }
 }
