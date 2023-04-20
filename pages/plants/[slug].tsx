@@ -40,8 +40,6 @@ export const getStaticPaths:GetStaticPaths = async ()=>{
     }))
     return{
         paths,fallback:false,
-        revalidate:60
-
     }
 }
 export const  getStaticProps:GetStaticProps = async(context:GetStaticPropsContext) => {
