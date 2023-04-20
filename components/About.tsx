@@ -25,7 +25,7 @@ const About = () => {
 <path className="fill-main-brown" fillRule="evenodd" clipRule="evenodd" d="M1200.58 11.8581L1133.58 5.8581C1067.58 -0.141896 933.581 -12.1419 800.581 35.8581C667.581 83.8581 533.581 160.858 400.581 214.858C267.581 268.858 133.581 268.858 67.5811 268.858H0.581055V491.858H67.5811C133.581 491.858 267.581 491.858 400.581 491.858C533.581 491.858 667.581 491.858 800.581 491.858C933.581 491.858 1067.58 491.858 1133.58 491.858H1200.58V11.8581Z" />
 </svg>
 
-      <div className="w-full order-2 lg:order-1 pb-12 z-[2]   grid place-items-center relative">
+      <div className="w-full max-w-7xl order-2 lg:order-1 pb-12 z-[2]   grid place-items-center relative">
         {/* giant svg */}
         <svg className="w-full  " viewBox="0 0 1315 946" fill="none" xmlns="http://www.w3.org/2000/svg">
   <path d="M764.458 0.310059H529.976V338.241H764.458V0.310059Z" fill="#A6C688"/>

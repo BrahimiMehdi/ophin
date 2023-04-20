@@ -1,34 +1,21 @@
 import Link from "next/link";
 import { HiMenu } from "react-icons/hi";
 import {Link as LinkS} from "react-scroll" 
-const Header = () => {
-  const links = [
-    {
-      title: "Home",
-      to: "hero",
-    },
-    {
-      title: "About",
-      to: "about",
-    },
-    {
-      title: "Plants",
-      to: "plants",
-    },
-    {
-      title: "Contact",
-      to: "contact",
-    },
-  ];
+export type linkType = {
+  to:string;
+  title:string;
+}
+const Header = ({setopenNav,links}:{setopenNav:Function,links:Array<linkType>}) => {
+  
   return (
-    <header className="absolute  top-0  px-20  z-[5] left-0 h-20 w-full">
-      <div className="flex justify-between w-full gap-x-8">
+    <header className="absolute  top-0 px-8 pt-2  lg:px-20  z-[5] left-0 h-20 w-full">
+      <div className="flex justify-between items-center w-full gap-x-8">
         <Link className="text-2xl font-extrabold font-Montserrat text-dark-brown" href={"/"}>
-          <img className="w-16 " src="/Logo.png" alt="" />
+          <img className="lg:w-16 w-10 " src="/Logo.png" alt="" />
         </Link>
-        <HiMenu className="block text-5xl justify-left lg:hidden text-dark-brown" />
+        <HiMenu onClick={()=>setopenNav((prev:any)=>!prev)} className="block cursor-pointer text-4xl justify-left lg:hidden text-dark-brown" />
 
-        <nav className="w-full max-w-xl ">
+        <nav className="w-full max-w-xl lg:block hidden ">
           <ul className="justify-between items-center h-full hidden text-xl lg:flex text-dark-brown font-Amaranth ">
             {links.map((item) => (
               <li key={item.to}>
