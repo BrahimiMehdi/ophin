@@ -14,8 +14,8 @@ const Footer = () => {
       </clipPath>
       </defs>
       </svg>
-        <div className="w-full max-w-6xl grid grid-rows-2 px-8 lg:flex relative z-[3] gap-y-8 justify-center lg:justify-between items-center">
-        <ul className="items-center lg:justify-normal justify-evenly lg:px-0 px-8 gap-x-48 lg:h-full  w-full text-xl flex text-dark-brown font-Amaranth ">
+        <div className="w-full  grid grid-rows-2 lg:pl-20 px-8 lg:flex relative z-[3] gap-y-8 justify-center lg:justify-between items-center">
+        <ul className="items-center lg:justify-start justify-evenly lg:px-0 px-8 gap-x-48 lg:h-full  w-full text-xl flex text-dark-brown font-Amaranth ">
           <li>
             <Link href={"/"} className="relative cursor-pointer group">
               Home
@@ -23,14 +23,14 @@ const Footer = () => {
             </Link>
           </li>
           <li>
-            <Link href={"/"} className="relative cursor-pointer group">
+            <Link href={"/plants"} className="relative cursor-pointer group">
               Plants
               <span className="absolute group-focus:w-full group-hover:w-full transition-all duration-500 ease-in-out -bottom-4 w-0 bg-dark-brown h-1 left-0"></span>
             </Link>
           </li>
         </ul>
         {/* social media */}
-        <div className="lg:h-28 lg:p-4 flex justify-between max-w-xl items-center lg:mt-8 gap-x-8 w-full">
+        <div className="lg:h-28 lg:p-4 flex justify-between max-w-xl items-center  gap-x-8 w-full">
         <a href="http://instagram.com" target="_blank" rel="noopener noreferrer">
         <AiFillInstagram className="lg:text-5xl text-3xl transition-transform duration-500 ease-in-out hover:-translate-y-2 text-white p-2 lg:p-4 rounded-full lg:h-16 lg:w-16 h-12 w-12 bg-dark-brown" />
         </a>
@@ -45,7 +45,7 @@ const Footer = () => {
         </a>
       </div>
       </div>
-      <div className="w-full lg:justify-center  grid lg:grid-cols-2">
+      <div className="w-full place-items-center lg:place-items-end lg:pr-8  grid lg:grid-cols-2">
       <Contact />
       <svg className=" bottom-0 relative z-[3] max-w-xl left-0" viewBox="0 0 2005 1730" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M1358.29 339.822H67.7832V1615.21H1358.29V339.822Z" fill="white" stroke="#263238" stroke-linecap="round" stroke-linejoin="round"/>

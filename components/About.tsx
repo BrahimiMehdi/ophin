@@ -221,8 +221,7 @@ const About = () => {
           <h2 className="text-5xl relative z-[2]  font-bold font-Montserrat text-white  lg:text-dark-brown">About us</h2>
         </div>
         <p className="text-left text-xl  font-Amaranth text-stone-100 lg:text-stone-600 lg:text-2xl">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores similique obcaecati, enim quas nisi tempora
-          debitis commodi repudiandae libero a neque quia excepturi quaerat aut, optio mollitia eum voluptatum vel?
+        Ophin Club is an inclusive community that fosters collaboration and personal growth. Our events and activities cater to a diverse range of interests, providing opportunities for members to connect, learn, and pursue their passions. Join us today and discover what Ophin Club can offer you.
         </p>
       </div>
     </section>
