@@ -39,7 +39,9 @@ export const getStaticPaths:GetStaticPaths = async ()=>{
         params:{slug:plante.slug}
     }))
     return{
-        paths,fallback:false
+        paths,fallback:false,
+        revalidate:60
+
     }
 }
 export const  getStaticProps:GetStaticProps = async(context:GetStaticPropsContext) => {
@@ -47,7 +49,8 @@ export const  getStaticProps:GetStaticProps = async(context:GetStaticPropsContex
     const plant = await getPlants({type:"single",slug:slug})
   return {
     props: {
-      plant:plant[0]
+      plant:plant[0],
+      revalidate:60
     }, // will be passed to the page component as props
   }
 }

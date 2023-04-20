@@ -45,7 +45,8 @@ export const  getStaticProps:GetStaticProps = async() => {
   const plants = await getPlants({type:"partial"})
   return {
     props: {
-      plants:plants
+      plants:plants,
+      revalidate:60
     }, // will be passed to the page component as props
   }
 }
