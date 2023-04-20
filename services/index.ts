@@ -1,11 +1,11 @@
-import { error } from "console";
 import { GraphQLClient, request, gql } from "graphql-request";
-
 export interface TotalPlantReponse {
   plants: SinglePlantResponse[];
 }
 export interface SinglePlantResponse {
-  fullDescription: string;
+  fullDescription: {
+    raw:any;
+  };
   name: string;
   shortDescription: string;
   slug: string;
@@ -20,7 +20,9 @@ const gqlClient = new GraphQLClient(API);
 const getPlantsQuery = gql`
   query Plants {
     plants {
-      fullDescription
+      fullDescription{
+        raw
+      }
       name
       shortDescription
       slug
@@ -35,7 +37,9 @@ const getPlantsQuery = gql`
 const getPlantDetailsQuery = gql`
   query Plants($slug:String!) {
     plants(where:{slug:$slug}) {
-      fullDescription
+      fullDescription{
+        raw
+      }
       name
       shortDescription
       slug
@@ -50,7 +54,9 @@ const getPlantDetailsQuery = gql`
 const getHomePlantsQuery = gql`
   query Plants {
     plants(first:6) {
-      fullDescription
+      fullDescription{
+        raw
+      }
       name
       shortDescription
       slug
