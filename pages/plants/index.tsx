@@ -30,5 +30,7 @@ export const  getStaticProps:GetStaticProps = async() => {
     props: {
       plants:plants
     }, // will be passed to the page component as props
+    revalidate:60
+
   }
 }
