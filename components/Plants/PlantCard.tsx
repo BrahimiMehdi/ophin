@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { SinglePlantResponse } from "@/services";
 const PlantCard = ({plants}:{plants:SinglePlantResponse}) => {
+  
   return (
     <Link href={`/plants/${plants.slug}`} className="md:h-96 bg-white font-Montserrat h-80 relative  hover:-translate-y-3   group transition-all duration-500 ease-in-out  py-4 outline outline-2 outline-sky-100 rounded-xl from-white to-white w-full px-2  sm:px-4 shadow-lg">
       <div className="gap-y-4 relative z-[1] flex flex-col h-full ">
@@ -26,3 +27,4 @@ const PlantCard = ({plants}:{plants:SinglePlantResponse}) => {
 };
 
 export default PlantCard;
+
